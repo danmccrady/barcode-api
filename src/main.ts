@@ -7,9 +7,8 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('Barcode API')
-    .setDescription('Generate a barcode')
+    .setDescription('Generate a Barcode or QR Code')
     .setVersion('1.0')
-    .addTag('Barcode')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('v1/docs', app, document);

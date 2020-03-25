@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BarcodeDto } from './dto/BarcodeDto';
+import { QrcodeDto } from './dto/QrcodeDto';
 
 describe('AppController', () => {
   let app: TestingModule;
@@ -16,7 +16,7 @@ describe('AppController', () => {
   describe('getHello', () => {
     it('should return "Hello World!"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getBarcode({"imageType": "png", "type": "qr-code", "value": "testing"})).toBe('Hello World!');
+      expect(appController.getQrcode({"imageType": "png", "value": "testing", "width": 100, "margin": 1})).toBe('Hello World!');
     });
   });
 });
