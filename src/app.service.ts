@@ -41,7 +41,7 @@ export class AppService {
         const bwipjs = require('bwip-js');
           
         bwipjs.toBuffer({
-              bcid: 'code128',
+              bcid: args.type,
               text: args.value,
               scale: args.scale ? args.scale : 3,
               height: args.height ? args.height : 10,

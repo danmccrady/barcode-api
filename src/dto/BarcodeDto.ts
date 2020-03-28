@@ -1,7 +1,7 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class BarcodeDto {
-    @ApiProperty({ enum: ['c39', 'c128a', 'c128b', 'c128c', 'i2of5', 'qr']})
+    @ApiProperty({ enum: ['code39', 'code128', 'interleaved2of5', 'ean13', 'upca']})
     type: string;
 
     @ApiPropertyOptional({
